@@ -22,7 +22,7 @@ void NH3::nilai_Ro(float Ro){
 }
 void NH3::nilai_ppm() {
   VRL = analogRead(pin) * (5.0 / 1023.0); //Measure the voltage drop and convert to 0-5V
-  Rs = ((5.0 * RL) / VRL) - RL; //Formula to get Rs value
+  Rs = (5.0 / VRL - 1) * RL; //Formula to get Rs value
   ratio = Rs / Ro; // find ratio Rs/Ro
   ppm = pow(10, ((log10(ratio) - b) / m)); //use formula to calculate ppm
   Serial.println(ppm);
