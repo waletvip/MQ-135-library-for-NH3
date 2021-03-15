@@ -6,7 +6,6 @@
 float VRL; //Voltage drop across the MQ sensor
 float Rs; //Sensor resistance at gas concentration
 float ratio; //Define variable for ratio Rs/Ro
-//float ppm; //Ammonia value
 float MaxRo = 0; //Sensor Resistance at air concentration
 
 NH3::NH3(byte pin) {
@@ -25,7 +24,7 @@ void NH3::nilai_ppm() {
   Rs = (5.0 / VRL - 1) * RL; //Formula to get Rs value
   ratio = Rs / Ro; // find ratio Rs/Ro
   ppm = pow(10, ((log10(ratio) - b) / m)); //use formula to calculate ppm
-  Serial.println(ppm);
+//  Serial.println(ppm);
 }
 void NH3::nilai_vrl() {
 	Serial.println(VRL);
