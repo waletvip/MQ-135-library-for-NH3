@@ -24,6 +24,7 @@ void NH3::nilai_ppm() {
   Rs = (5.0 / VRL - 1) * RL; //Formula to get Rs value
   ratio = Rs / Ro; // find ratio Rs/Ro
   ppm = pow(10, ((log10(ratio) - b) / m)); //use formula to calculate ppm
+  delay(200);
 //  Serial.println(ppm);
 }
 void NH3::nilai_vrl() {

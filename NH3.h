@@ -15,5 +15,6 @@ class NH3 {
     void nilai_ppm();
     void nilai_Ro(float Ro);
     void lcd_ppm();
+    
 };
 #endif
